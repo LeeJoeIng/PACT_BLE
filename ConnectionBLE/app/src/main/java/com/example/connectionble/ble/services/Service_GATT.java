@@ -122,7 +122,6 @@ public class Service_GATT extends Service {
 
         if (data != null && data.length > 0) {
 
-            //intent.putExtra(EXTRA_DATA, new String(data) + "\n" + Utils.hexToString(data));
             intent.putExtra(EXTRA_DATA, new String(data) + "\n" + Utils.hexToString(data));
 
         } else {
