@@ -91,6 +91,15 @@ public class ServiceBLE {
 
         }
     }
+    
+     /**
+     * @param uuid The uuid of the service
+     * @param data The data received on real time from the broadcast (User ID)
+     */
+    public static void updateCharacteristic(String uuid, String data) {
+        //listAdapter.notifyDataSetChanged();
+        //YOUR CODE HERE (Use the data which is User Id to get their business card from databases etc.)
+    }
 
     public ServiceConnection getBle_ServiceConnection() {
         return ble_ServiceConnection;
