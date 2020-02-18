@@ -39,7 +39,7 @@ public class GATTBroadcastReceiver extends BroadcastReceiver {
             Utils.toast(activity.getApplicationContext(), "Disconnected From Device");
             activity.finish();
         } else if (Service_GATT.ACTION_GATT_SERVICES_DISCOVERED.equals(action)) {
-            ServiceBLE.updateServices();
+            activity.getServiceBLE().updateServices();
         } else if (Service_GATT.ACTION_DATA_AVAILABLE.equals(action)) {
             String uuid = intent.getStringExtra(Service_GATT.EXTRA_UUID);
             String data = intent.getStringExtra(Service_GATT.EXTRA_DATA);
@@ -47,7 +47,7 @@ public class GATTBroadcastReceiver extends BroadcastReceiver {
             //ADD YOUR CODES HERE (IT'S LIKE A LISTENER)
             //OR
             //YOU WRITE YOUR CODE IN -> ServiceBLE.updateCharacteristic() AND CALL IT HERE
-            ServiceBLE.updateCharacteristic(uuid, data);
+            activity.getServiceBLE().updateCharacteristic(uuid, data);
         }
         return;
     }

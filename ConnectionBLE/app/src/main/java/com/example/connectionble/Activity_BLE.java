@@ -23,7 +23,6 @@ public class Activity_BLE extends AppCompatActivity {
     private Button button2;
     private Intent ble_Service_Intent;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,5 +73,9 @@ public class Activity_BLE extends AppCompatActivity {
         unregisterReceiver(gattUpdateReceiver);
         unbindService(serviceBLE.getBle_ServiceConnection());
         ble_Service_Intent = null;
+    }
+
+    public ServiceBLE getServiceBLE() {
+        return serviceBLE;
     }
 }
