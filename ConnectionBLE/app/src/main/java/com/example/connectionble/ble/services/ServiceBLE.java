@@ -99,6 +99,7 @@ public class ServiceBLE {
     public static void updateCharacteristic(String uuid, String data) {
         //listAdapter.notifyDataSetChanged();
         //YOUR CODE HERE (Use the data which is User Id to get their business card from databases etc.)
+        //The attribute "ble" is your activity, you can use it to make changes on the UI eg: ble.getCard(); etc.  
     }
 
     public ServiceConnection getBle_ServiceConnection() {
